@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Fridge</string>
+    <string name="Блюда">Блюда</string>
+    <string name="Диета">Диета</string>
+    <string name="Завтрак">Завтрак</string>
+    <string name="Обед">Обед</string>
+    <string name="Ужин">Ужин</string>
+    <string name="Мясоед">Мясоед</string>
+    <string name="Постящийся">Постящийся</string>
+    <string name="Вегетарианец">Вегетарианец</string>
+    <string name="Беременным">Еда для беременных</string>
+</resources>

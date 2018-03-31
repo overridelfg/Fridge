@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fridgex"
+    tools:context="com.example.kirillrychkov.fridge1.vegan">
+    <Button
+        android:id="@+id/button2"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:background="@android:color/holo_blue_light"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="@string/Завтрак"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:background="@android:color/holo_blue_light"
+        android:backgroundTint="@android:color/holo_blue_light"
+        app:layout_constraintVertical_bias="0.5"
+        android:text="@string/Обед"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/transfer"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="50dp"
+        android:background="@android:color/holo_blue_light"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="@string/Ужин"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+</android.support.constraint.ConstraintLayout>
