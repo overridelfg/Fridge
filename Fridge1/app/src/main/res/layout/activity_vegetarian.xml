@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fridgex"
-    tools:context="com.example.kirillrychkov.fridge1.vegan">
+    tools:context="com.example.kirillrychkov.fridge1.Vegetarian">
     <Button
         android:id="@+id/button2"
         style="@android:style/Widget.Holo.Light.Button.Toggle"

@@ -8,4 +8,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <color name="reddivider">#00FFFF</color>
+    <dimen name="twodp">2dp</dimen>
 </resources>

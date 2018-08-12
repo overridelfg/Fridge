@@ -16,19 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".bluda" />
-        <activity android:name=".vegan" />
-        <activity android:name=".miasoed" />
-        <activity android:name=".Postnayaeda" />
-        <activity android:name=".zavtrak" />
-        <activity android:name=".uzhin" />
-        <activity android:name=".obed" />
-        <activity android:name=".zavtrak2" />
-        <activity android:name=".obed2" />
-        <activity android:name=".uzhin2" />
-        <activity android:name=".zavtrak3" />
-        <activity android:name=".obed3" />
-        <activity android:name=".uzhin3"></activity>
+        <activity android:name=".Vegetarian" />
+        <activity android:name=".Meateater" />
+        <activity android:name=".Fasting" />
+        <activity android:name=".Setting" />
+        <activity android:name=".UserSetting" />
+        <activity android:name=".test" />
+        <activity android:name=".Products" />
+        <activity android:name=".Breakfast" />
+        <activity android:name=".Dinner" />
+        <activity android:name=".Lunch" />
     </application>
 
 </manifest>
