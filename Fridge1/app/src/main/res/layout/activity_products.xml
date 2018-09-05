@@ -4,38 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_drawer_selected_text"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".Products">
 
     <TextView
+        android:id="@+id/choose1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:text="@string/Выберите_время_для_питания"
+        android:textColor="#000000"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        android:textColor="#000000"
-        android:textSize="25dp"
-        android:id="@+id/choose1"
-        android:text="Выберите время для питания"
-        />
+        app:layout_constraintVertical_bias="0.05" />
 
 
     <ListView
+        android:id="@+id/lvOk2"
         android:layout_width="match_parent"
         android:layout_height="480dp"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        android:id="@+id/lvOk2"
-        android:textColor="#000000"
-        android:focusableInTouchMode="false"
-        android:isScrollContainer="false"
-        >
+        app:layout_constraintVertical_bias="0.75">
 
     </ListView>
 
@@ -46,5 +44,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"/>
+        app:layout_constraintVertical_bias="0.05" />
 </android.support.constraint.ConstraintLayout>

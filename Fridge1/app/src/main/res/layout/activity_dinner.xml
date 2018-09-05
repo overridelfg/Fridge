@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fridgex"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".Dinner">
 
 </android.support.constraint.ConstraintLayout>

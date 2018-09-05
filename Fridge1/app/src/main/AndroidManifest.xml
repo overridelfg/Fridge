@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kirillrychkov.fridge1">
 
@@ -8,7 +7,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="com.orm.SugarApp">
+
+        <meta-data android:name="DATABASE" android:value="sugar_example.db"/>
+        <meta-data android:name="VERSION" android:value="1"/>
+        <meta-data android:name="QUERY_LOG" android:value="true"/>
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +26,6 @@
         <activity android:name=".Fasting" />
         <activity android:name=".Setting" />
         <activity android:name=".UserSetting" />
-        <activity android:name=".test" />
         <activity android:name=".Products" />
         <activity android:name=".Breakfast" />
         <activity android:name=".Dinner" />
@@ -29,3 +33,4 @@
     </application>
 
 </manifest>
+

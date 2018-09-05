@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -20,96 +22,54 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserSetting extends AppCompatActivity {
-        private final static String FILE_NAME="test.txt";
-        final String LOG_TAG = "myLogs";
+    private CheckBox checkBox1;
+    private CheckBox checkBox2;
+    private CheckBox checkBox3;
+    private CheckBox checkBox4;
+    private CheckBox checkBox5;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_usersetting);
-            List<String> a=new ArrayList<String>();
+            checkBox1 =  findViewById(R.id.checkBox1);
+            checkBox2 =  findViewById(R.id.checkBox2);
+            checkBox3 =  findViewById(R.id.checkBox3);
+            checkBox4 =  findViewById(R.id.checkBox4);
+            checkBox5 =  findViewById(R.id.checkBox5);
 
-
-            a.add("Мясоед");
-            a.add("Вегетарианец");
-            a.add("Постящийся");
-            a.add("Диета");
-            a.add("Еда для беременных");
-
-
-            ListView lvMain = findViewById(R.id.lvOk2);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,a );
-            lvMain.setAdapter(adapter);
-
-
-            lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View itemClicked, int position,
-                                        long id) {
-                    Toast.makeText(getApplicationContext(), ((TextView) itemClicked).getText(),
-                            Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            lvMain.setOnScrollListener(new AbsListView.OnScrollListener() {
-                public void onScrollStateChanged(AbsListView view, int scrollState) {
-                    Log.d(LOG_TAG, "scrollState = " + scrollState);
-                }
-
-                public void onScroll(AbsListView view, int firstVisibleItem,
-                                     int visibleItemCount, int totalItemCount) {
-                }
-            });
         }
 
+            public void onMain(View view) {
 
-        public String openText(){
-
-            FileInputStream fin = null;
-            try {
-                fin = openFileInput(FILE_NAME);
-                byte[] bytes = new byte[fin.available()];
-                fin.read(bytes);
-                String text = new String (bytes);
-                return text;
-            }
-            catch(IOException ex) {
-
-                boolean kostil=true;
-                return FILE_NAME;
-            }
-            finally{
-
-                try{
-                    if(fin!=null)
-                        fin.close();
+                if (checkBox1.isChecked() && !checkBox3.isChecked() && !checkBox2.isChecked() &&
+                        !checkBox4.isChecked() && !checkBox5.isChecked()){
+                    Intent intent = new Intent(UserSetting.this,MainActivity.class);
+                    startActivity(intent);
                 }
-                catch(IOException ex){
-
-                    boolean kostil=true;
+                if (!checkBox1.isChecked() && !checkBox3.isChecked() && checkBox2.isChecked() &&
+                        !checkBox4.isChecked() && !checkBox5.isChecked()){
+                    Intent intent = new Intent(UserSetting.this,MainActivity.class);
+                    startActivity(intent);
                 }
-            }
-        }
-        public void saveText(String obmen){
-            FileOutputStream fos = null;
-            try {
-
-                String text =obmen;
-                fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
-                fos.write(text.getBytes());
-            }
-            catch(IOException ex) {
-                boolean kostil=true;
-            }
-            finally{
-                try{
-                    if(fos!=null)
-                        fos.close();
+                if (!checkBox1.isChecked() && checkBox3.isChecked() && !checkBox2.isChecked() &&
+                        !checkBox4.isChecked() && !checkBox5.isChecked()){
+                    Intent intent = new Intent(UserSetting.this,MainActivity.class);
+                    startActivity(intent);
                 }
-                catch(IOException ex){
-                    boolean kostil=true;
+                if (!checkBox1.isChecked() && !checkBox3.isChecked() && !checkBox2.isChecked() &&
+                        checkBox4.isChecked() && !checkBox5.isChecked()){
+                    Intent intent = new Intent(UserSetting.this,MainActivity.class);
+                    startActivity(intent);
                 }
-            }
-        }
+                if (!checkBox1.isChecked() && !checkBox3.isChecked() && !checkBox2.isChecked() &&
+                        !checkBox4.isChecked() && checkBox5.isChecked()){
+                    Intent intent = new Intent(UserSetting.this,MainActivity.class);
+                    startActivity(intent);
+                }
 
-    }
+
+
+            }
+}
+
 

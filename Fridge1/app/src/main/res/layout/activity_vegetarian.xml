@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fridgex"
+    android:background="#000000"
     tools:context="com.example.kirillrychkov.fridge1.Vegetarian">
     <Button
         android:id="@+id/button2"
-        style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="300dp"
         android:layout_height="75dp"
         android:layout_gravity="center"
@@ -25,7 +24,6 @@
 
     <Button
         android:id="@+id/button"
-        style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="300dp"
         android:layout_height="75dp"
         android:layout_gravity="center"
@@ -42,7 +40,6 @@
 
     <Button
         android:id="@+id/transfer"
-        style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="300dp"
         android:layout_height="75dp"
         android:layout_gravity="center_vertical"

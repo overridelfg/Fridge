@@ -9,6 +9,10 @@
     <string name="Постящийся">Постящийся</string>
     <string name="Вегетарианец">Вегетарианец</string>
     <string name="Настройки">Настройки</string>
-    <string name="Тест">Тест</string>
-
+    <string name="Выберите_предпочтение">Выберите предпочтение:</string>
+    <string name="Диета">Диета</string>
+    <string name="Еда_для_беременных">Еда для беременных</string>
+    <string name="welcome_to_fridge">Welcome to fridge!</string>
+    <string name="Принять">Принять</string>
+    <string name="Выберите_время_для_питания">Выберите время для питания</string>
 </resources>

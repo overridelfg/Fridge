@@ -47,10 +47,10 @@ public class Breakfast extends AppCompatActivity {
         a.add("Капуста");
 
 
-        ListView lvMain = findViewById(R.id.lvOk2);
+        ListView lvMain = findViewById(R.id.listview);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,a );
         selection = (TextView) findViewById(R.id.choose1);
-        choiceList = (ListView) findViewById(R.id.lvOk2);
+        choiceList = (ListView) findViewById(R.id.listview);
         lvMain.setAdapter(adapter);
 
 

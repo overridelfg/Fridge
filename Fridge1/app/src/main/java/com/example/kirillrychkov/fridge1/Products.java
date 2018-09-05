@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Products extends AppCompatActivity {
-        private final static String FILE_NAME="test.txt";
-        final String LOG_TAG = "myLogs";
+    private final static String FILE_NAME="test.txt";
+    final String LOG_TAG = "myLogs";
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {

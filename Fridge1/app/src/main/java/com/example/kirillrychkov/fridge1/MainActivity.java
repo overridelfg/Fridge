@@ -16,10 +16,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,Products.class);
         startActivity(intent);
     }
-    public void onTest(View view){
-        Intent intent = new Intent(MainActivity.this,test.class);
-        startActivity(intent);
-    }
     public void onUserSetting(View view){
         Intent intent = new Intent(MainActivity.this,UserSetting.class);
         startActivity(intent);
