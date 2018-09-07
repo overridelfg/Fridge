@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckedTextView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,24 +20,37 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Products extends AppCompatActivity {
+public class Breakfast extends AppCompatActivity {
+    ListView choiceList;
+    TextView selection;
     private final static String FILE_NAME="test.txt";
     final String LOG_TAG = "myLogs";
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_products);
-        List<String> a=new ArrayList<String>();
+        setContentView(R.layout.activity_breakfast);
+        final List<String> a=new ArrayList<String>();
 
 
-        a.add("Завтрак");
-        a.add("Обед");
-        a.add("Ужин");
+        a.add("Молоко");
+        a.add("Творог");
+        a.add("Мясо");
+        a.add("Лук-порей");
+        a.add("Сыр");
+        a.add("Сливочное масло");
+        a.add("Лук");
+        a.add("Болграский перец");
+        a.add("Кокосовое молоко");
+        a.add("Огурец");
+        a.add("Морковь");
+        a.add("Капуста");
 
 
-        ListView lvMain = findViewById(R.id.lvOk2);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,a );
+        ListView lvMain = findViewById(R.id.listview);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,a );
+        selection = (TextView) findViewById(R.id.choose1);
+        choiceList = (ListView) findViewById(R.id.listview);
         lvMain.setAdapter(adapter);
 
 
@@ -47,26 +62,19 @@ public class Products extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
-        lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        choiceList.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
-            public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
-                TextView textView = (TextView) itemClicked;
-                String strText = textView.getText().toString();
-                if(strText.equalsIgnoreCase(getResources().getString(R.string.Завтрак))) {
-                    Intent intent = new Intent(Products.this,Breakfast.class);
-                    startActivity(intent);
-                }
-                if(strText.equalsIgnoreCase(getResources().getString(R.string.Обед))) {
-                    Intent intent = new Intent(Products.this,Lunch.class);
-                    startActivity(intent);
-                }
-                if(strText.equalsIgnoreCase(getResources().getString(R.string.Ужин))) {
-                    Intent intent = new Intent(Products.this,Dinner.class);
-                    startActivity(intent);
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                selection.setText("");
+                SparseBooleanArray chosen = ((ListView) parent).getCheckedItemPositions();
+                for (int i = 0; i < chosen.size(); i++) {
+                    if (chosen.valueAt(i)) {
+                        selection.append(a.get(chosen.keyAt(i)) + " ");
+                    }
                 }
             }
         });
-
 
         lvMain.setOnScrollListener(new AbsListView.OnScrollListener() {
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -78,6 +86,7 @@ public class Products extends AppCompatActivity {
             }
         });
     }
+
 
     public String openText(){
 

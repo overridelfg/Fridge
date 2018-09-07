@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="#F4F4FC"
+    tools:context="com.example.kirillrychkov.fridge.MainActivity">
+
+    <ImageView
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:src="@drawable/fridgeicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.20" />
+
+    <TextView
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="@string/Fridge"
+        android:id="@+id/MainText"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintVertical_bias="0.13"/>
+
+
+    <Button
+        android:id="@+id/Products"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="340dp"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:onClick="onProducts"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:text="@string/Продукты"
+        android:textSize="40sp"
+        android:textColor="#F4F4FC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
+
+
+    <Button
+        android:id="@+id/UserSetting"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="340dp"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:onClick="onUserSetting"
+        android:textColor="#F4F4FC"
+        android:text="@string/Пользователь"
+        android:textAllCaps="false"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <Button
+        android:id="@+id/Setting"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="340dp"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:onClick="onSetting"
+        android:textColor="#F4F4FC"
+        android:text="@string/Настройки"
+        android:textAllCaps="false"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

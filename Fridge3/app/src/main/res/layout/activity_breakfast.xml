@@ -5,58 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F4FC"
-    tools:context=".Products">
+    tools:context=".Breakfast">
 
     <TextView
         android:id="@+id/choose1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="28sp"
-        android:text="@string/Выберите_время_для_питания"
+        android:text="@string/Выберите_продукты"
         android:textColor="#000000"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05" />
 
-    <ImageView
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:layout_gravity="center"
-        android:background="@drawable/fridgeicon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
-
 
     <ListView
-        android:id="@+id/lvOk2"
+        android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_height="374dp"
+        android:choiceMode="multipleChoice"
         android:focusableInTouchMode="false"
         android:isScrollContainer="false"
-        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709">
+        app:layout_constraintVertical_bias="0.571">
 
     </ListView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/breakfast"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:text="@string/Принять"
+        android:textColor="#F4F4FC"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.95"/>
 
 </android.support.constraint.ConstraintLayout>

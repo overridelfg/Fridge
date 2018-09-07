@@ -3,11 +3,11 @@ package com.example.kirillrychkov.fridge;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Dinner extends AppCompatActivity {
+public class Fasting extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dinner);
+        setContentView(R.layout.activity_fasting);
     }
 }

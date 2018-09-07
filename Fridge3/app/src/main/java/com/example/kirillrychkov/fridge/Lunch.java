@@ -3,7 +3,7 @@ package com.example.kirillrychkov.fridge;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class lunch extends AppCompatActivity {
+public class Lunch extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
