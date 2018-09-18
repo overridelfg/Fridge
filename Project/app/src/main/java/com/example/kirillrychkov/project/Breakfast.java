@@ -33,18 +33,18 @@ public class Breakfast extends AppCompatActivity {
         final List<String> a=new ArrayList<String>();
 
 
-        a.add("Молоко");
-        a.add("Творог");
-        a.add("Мясо");
         a.add("Лук-порей");
-        a.add("Сыр");
-        a.add("Сливочное масло");
-        a.add("Лук");
-        a.add("Болграский перец");
-        a.add("Кокосовое молоко");
-        a.add("Огурец");
         a.add("Морковь");
-        a.add("Капуста");
+        a.add("Кокосовое молоко");
+        a.add("Тыква");
+        a.add("Картофель");
+        a.add("Авокадо");
+        a.add("Сельдерей");
+        a.add("Свекла");
+        a.add("Помидоры");
+        a.add("Консервированная кукуруза");
+        a.add("Свежий красный перец");
+        a.add("Цветная капуста");
 
 
         ListView lvMain = findViewById(R.id.listview);
@@ -76,6 +76,7 @@ public class Breakfast extends AppCompatActivity {
             }
         });
 
+
         lvMain.setOnScrollListener(new AbsListView.OnScrollListener() {
             public void onScrollStateChanged(AbsListView view, int scrollState) {
                 Log.d(LOG_TAG, "scrollState = " + scrollState);
@@ -86,7 +87,10 @@ public class Breakfast extends AppCompatActivity {
             }
         });
     }
-
+    public void onDishes(View view){
+        Intent intent = new Intent(Breakfast.this,Dishes.class);
+        startActivity(intent);
+    }
 
     public String openText(){
 

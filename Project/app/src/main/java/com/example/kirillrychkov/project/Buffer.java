@@ -3,58 +3,50 @@ package com.example.kirillrychkov.project;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class Setting extends AppCompatActivity {
-    private final static String FILE_NAME = "content.txt";
+public class Buffer extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
-        TextView writeinformation = findViewById(R.id.writeinformation);
-        String test="";
+        setContentView(R.layout.activity_buffer);
+
 
         String str=openText();
         char[] chArray = str.toCharArray();
         for(int i=2;i<chArray.length;i++){
             if(chArray[i-2]=='V' && chArray[i-1]=='e' && chArray[i]=='g'){
-                test="Вегетариангец";
-                break;
+                Intent intentveg=new Intent(Buffer.this,Vegetarian.class);
+                startActivity(intentveg);
             }
             if(chArray[i-2]=='M' && chArray[i-1]=='a' && chArray[i]=='s'){
-                test="Мясоед";
-                break;
+                Intent intentmas=new Intent(Buffer.this,Meateater.class);
+                startActivity(intentmas);
             }
             if(chArray[i-2]=='P' && chArray[i-1]=='o' && chArray[i]=='s'){
-                test="Постящийся";
-                break;
+                Intent intentpos=new Intent(Buffer.this,Fasting.class);
+                startActivity(intentpos);
             }
             if(chArray[i-2]=='D' && chArray[i-1]=='i' && chArray[i]=='t'){
-                test="На диете";
-                break;
+                Intent intentdit=new Intent(Buffer.this,Diet.class);
+                startActivity(intentdit);
             }
             if(chArray[i-2]=='B' && chArray[i-1]=='e' && chArray[i]=='r'){
-                test="Беременный";
-                break;
-
+                Intent intentber=new Intent(Buffer.this,Beremm.class);
+                startActivity(intentber);
             }
         }
 
-        writeinformation.setText(test);
+
     }
-    public void onMain2(View view){
-        Intent intent = new Intent(Setting.this,MainActivity.class);
-        startActivity(intent);
-    }
-    public void onMain3(View view){
-        Intent intent = new Intent(Setting.this,UserSetting.class);
-        startActivity(intent);
-    }
+
+    private final static String FILE_NAME = "content.txt";
+
+
     public String openText(){
 
         FileInputStream fin = null;
@@ -82,4 +74,5 @@ public class Setting extends AppCompatActivity {
             }
         }
     }
+
 }

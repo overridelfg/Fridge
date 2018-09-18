@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,65 +20,55 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Products extends AppCompatActivity {
-    private final static String FILE_NAME="test.txt";
-    final String LOG_TAG = "myLogs";
-    @Override
+    private CheckBox checkBox1;
+    private CheckBox checkBox2;
+    private CheckBox checkBox3;
+    private CheckBox checkBox4;
+    private CheckBox checkBox5;
+    private CheckBox checkBox6;
+    private CheckBox checkBox7;
+    private CheckBox checkBox8;
+    private CheckBox checkBox9;
+    private CheckBox checkBox10;
+    private CheckBox checkBox11;
+    private CheckBox checkBox12;
+    private CheckBox checkBox13;
+    private CheckBox checkBox14;
+    private CheckBox checkBox15;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_products);
-        List<String> a=new ArrayList<String>();
+        setContentView(R.layout.activity_usersetting);
 
 
-        a.add("Завтрак");
-        a.add("Обед");
-        a.add("Ужин");
+        String str=openText();
+        if(str=="Вегетарианец"){
+            Intent intentveg=new Intent(Products.this,Vegetarian.class);
+            startActivity(intentveg);
+        }
 
 
-        ListView lvMain = findViewById(R.id.lvOk2);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,a );
-        lvMain.setAdapter(adapter);
 
+        checkBox1 = findViewById(R.id.Product1);
+        checkBox2 = findViewById(R.id.Product2);
+        checkBox3 = findViewById(R.id.Product3);
+        checkBox4 = findViewById(R.id.Product4);
+        checkBox5 = findViewById(R.id.Product5);
+        checkBox6 = findViewById(R.id.Product6);
+        checkBox7 = findViewById(R.id.Product7);
+        checkBox8 = findViewById(R.id.Product8);
+        checkBox9 = findViewById(R.id.Product9);
+        checkBox10 = findViewById(R.id.Product10);
+        checkBox11 = findViewById(R.id.Product11);
+        checkBox12 = findViewById(R.id.Product12);
+        checkBox13 = findViewById(R.id.Product13);
+        checkBox14 = findViewById(R.id.Product14);
+        checkBox15 = findViewById(R.id.Product15);
 
-        lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View itemClicked, int position,
-                                    long id) {
-                Toast.makeText(getApplicationContext(), ((TextView) itemClicked).getText(),
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-        lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
-                TextView textView = (TextView) itemClicked;
-                String strText = textView.getText().toString();
-                if(strText.equalsIgnoreCase(getResources().getString(R.string.Завтрак))) {
-                    Intent intent = new Intent(Products.this,Breakfast.class);
-                    startActivity(intent);
-                }
-                if(strText.equalsIgnoreCase(getResources().getString(R.string.Обед))) {
-                    Intent intent = new Intent(Products.this,Lunch.class);
-                    startActivity(intent);
-                }
-                if(strText.equalsIgnoreCase(getResources().getString(R.string.Ужин))) {
-                    Intent intent = new Intent(Products.this,Dinner.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
-
-        lvMain.setOnScrollListener(new AbsListView.OnScrollListener() {
-            public void onScrollStateChanged(AbsListView view, int scrollState) {
-                Log.d(LOG_TAG, "scrollState = " + scrollState);
-            }
-
-            public void onScroll(AbsListView view, int firstVisibleItem,
-                                 int visibleItemCount, int totalItemCount) {
-            }
-        });
     }
+    private final static String FILE_NAME = "content.txt";
+
 
     public String openText(){
 
@@ -91,7 +82,7 @@ public class Products extends AppCompatActivity {
         }
         catch(IOException ex) {
 
-            boolean kostil=true;
+            Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
             return FILE_NAME;
         }
         finally{
@@ -102,30 +93,10 @@ public class Products extends AppCompatActivity {
             }
             catch(IOException ex){
 
-                boolean kostil=true;
+                Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }
     }
-    public void saveText(String obmen){
-        FileOutputStream fos = null;
-        try {
 
-            String text =obmen;
-            fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
-            fos.write(text.getBytes());
-        }
-        catch(IOException ex) {
-            boolean kostil=true;
-        }
-        finally{
-            try{
-                if(fos!=null)
-                    fos.close();
-            }
-            catch(IOException ex){
-                boolean kostil=true;
-            }
-        }
-    }
 
 }

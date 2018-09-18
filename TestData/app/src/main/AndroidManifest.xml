@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kirillrychkov.project">
+    package="com.example.kirillrychkov.testdata">
 
     <application
         android:allowBackup="true"
@@ -16,19 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Breakfast" />
-        <activity android:name=".Dinner" />
-        <activity android:name=".Lunch" />
-        <activity android:name=".Fasting" />
-        <activity android:name=".Meateater" />
-        <activity android:name=".Products" />
-        <activity android:name=".Setting" />
-        <activity android:name=".UserSetting" />
-        <activity android:name=".Vegetarian" />
-        <activity android:name=".Dishes" />
-        <activity android:name=".Buffer" />
-        <activity android:name=".Diet" />
-        <activity android:name=".Beremm"></activity>
     </application>
 
 </manifest>

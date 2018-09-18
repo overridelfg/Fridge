@@ -25,7 +25,7 @@
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="374dp"
+        android:layout_height="321dp"
         android:choiceMode="multipleChoice"
         android:focusableInTouchMode="false"
         android:isScrollContainer="false"
@@ -34,7 +34,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571">
+        app:layout_constraintVertical_bias="0.686">
 
     </ListView>
     <Button
@@ -46,6 +46,7 @@
         android:text="@string/Принять"
         android:textColor="#F4F4FC"
         android:textSize="30sp"
+        android:onClick="onDishes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

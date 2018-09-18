@@ -12,51 +12,266 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="28sp"
-        android:text="@string/Выберите_время_для_питания"
+        android:text="@string/Выберите_продукты"
         android:textColor="#000000"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
-
-    <ImageView
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:layout_gravity="center"
-        android:background="@drawable/fridgeicon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.784" />
-
-
-    <ListView
-        android:id="@+id/lvOk2"
+        app:layout_constraintVertical_bias="0.03" />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="480dp"
-        android:focusableInTouchMode="false"
-        android:isScrollContainer="false"
-        android:textColor="#000000"
+        android:layout_height="484dp"
+        android:layout_marginBottom="97dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.709">
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
 
-    </ListView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        <CheckBox
+            android:id="@+id/Product1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Лук_порей"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <CheckBox
+            android:id="@+id/Product2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Морковь"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.30" />
+
+        <CheckBox
+            android:id="@+id/Product3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Кокосовое_молоко"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
+
+        <CheckBox
+            android:id="@+id/Product4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Тыква"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.40" />
+
+        <CheckBox
+            android:id="@+id/Product5"
+            android:layout_width="440dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Картофель"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <CheckBox
+            android:id="@+id/Product6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Авокадо"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <CheckBox
+            android:id="@+id/Product7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Сельдерей"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.30" />
+
+        <CheckBox
+            android:id="@+id/Product8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Свекла"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
+
+        <CheckBox
+            android:id="@+id/Product9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Помидоры"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.40" />
+
+        <CheckBox
+            android:id="@+id/Product10"
+            android:layout_width="440dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Консервированная_кукуруза"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <CheckBox
+            android:id="@+id/Product11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Свежий_красный_перец"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <CheckBox
+            android:id="@+id/Product12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Цветная_капуста"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.30" />
+
+        <CheckBox
+            android:id="@+id/Product13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Бананы"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
+
+        <CheckBox
+            android:id="@+id/Product14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Клубника"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.40" />
+
+        <CheckBox
+            android:id="@+id/Product15"
+            android:layout_width="440dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Голубика"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:theme="@style/MyCheckBox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Andri"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:text="@string/Принять"
+        android:textColor="#F4F4FC"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
-
+        app:layout_constraintVertical_bias="0.973" />
 </android.support.constraint.ConstraintLayout>

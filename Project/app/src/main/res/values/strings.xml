@@ -17,4 +17,21 @@
     <string name="Fridge">Fridge</string>
     <string name="Принять">Принять</string>
     <string name="Выберите_время_для_питания">Выберите время для питания</string>
+    <string name="Лук_порей">Лук-порей</string>
+    <string name="Морковь">Морковь</string>
+    <string name="Кокосовое_молоко">Кокосовое молоко</string>
+    <string name="Тыква">Тыква</string>
+    <string name="Картофель">Картофель</string>
+    <string name="Авокадо">Авокадо</string>
+    <string name="Сельдерей">Сельдерей</string>
+    <string name="Свекла">Свекла</string>
+    <string name="Помидоры">Помидоры</string>
+    <string name="Консервированная_кукуруза">Консервированная кукуруза</string>
+    <string name="Свежий_красный_перец">Свежий красный перец</string>
+    <string name="Цветная_капуста">Цветная капуста</string>
+    <string name="Бананы">Бананы</string>
+    <string name="Клубника">Клубника</string>
+    <string name="Голубика">Голубика</string>
+    <string name="Тест">Тест</string>
+    <string name="Изменить">Изменить</string>
 </resources>
