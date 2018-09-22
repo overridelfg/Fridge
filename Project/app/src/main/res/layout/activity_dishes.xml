@@ -7,5 +7,11 @@
     android:background="#F4F4FC"
     tools:context=".Dishes">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Textpidor"
+        android:text="HUI"/>
+
 
 </android.support.constraint.ConstraintLayout>

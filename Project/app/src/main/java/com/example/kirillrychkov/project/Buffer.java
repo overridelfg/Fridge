@@ -36,7 +36,7 @@ public class Buffer extends AppCompatActivity {
                 startActivity(intentdit);
             }
             if(chArray[i-2]=='B' && chArray[i-1]=='e' && chArray[i]=='r'){
-                Intent intentber=new Intent(Buffer.this,Beremm.class);
+                Intent intentber=new Intent(Buffer.this,Pregnant.class);
                 startActivity(intentber);
             }
         }

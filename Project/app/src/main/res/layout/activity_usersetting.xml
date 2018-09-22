@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/acceptsetting"
         android:layout_width="350sp"
-        android:layout_height="80sp"
+        android:layout_height="79sp"
         android:textSize="40sp"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -39,7 +39,7 @@ public class Setting extends AppCompatActivity {
                 break;
             }
             if(chArray[i-2]=='B' && chArray[i-1]=='e' && chArray[i]=='r'){
-                test="Беременный";
+                test="Еда для беременных";
                 break;
 
             }

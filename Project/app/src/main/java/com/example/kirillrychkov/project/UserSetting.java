@@ -46,6 +46,10 @@ public class UserSetting extends AppCompatActivity {
 
         if (checkBox1.isChecked() && !checkBox3.isChecked() && !checkBox2.isChecked() &&
                 !checkBox4.isChecked() && !checkBox5.isChecked()){
+            checkBox2.setEnabled(false);
+            checkBox3.setEnabled(false);
+            checkBox4.setEnabled(false);
+            checkBox5.setEnabled(false);
             obmen = "Veg";
             saveTextBuffer(obmen);
             Intent intent = new Intent(UserSetting.this,MainActivity.class);
