@@ -18,27 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Dinner"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Lunch"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Fasting"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Meateater"
-            android:screenOrientation="portrait"/>
         <activity android:name=".Setting"
             android:screenOrientation="portrait"/>
         <activity android:name=".UserSetting"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Vegetarian"
+        <activity android:name=".ProductList"
             android:screenOrientation="portrait"/>
         <activity android:name=".Dishes"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Buffer"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Diet"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Pregnant"
             android:screenOrientation="portrait"/>
     </application>
 

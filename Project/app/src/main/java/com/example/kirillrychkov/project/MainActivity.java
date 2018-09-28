@@ -12,14 +12,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-    private final static String FILE_NAME2 = "content2.txt";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
     public void onProducts(View view) {
-        Intent intent = new Intent(MainActivity.this,Buffer.class);
+        Intent intent = new Intent(MainActivity.this,ProductList.class);
         startActivity(intent);
     }
     public void onUserSetting(View view){

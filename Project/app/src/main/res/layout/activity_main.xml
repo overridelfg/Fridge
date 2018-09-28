@@ -45,7 +45,7 @@
     <Button
         android:id="@+id/Products"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
-        android:layout_width="340dp"
+        android:layout_width="320dp"
         android:layout_height="85dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
@@ -67,7 +67,7 @@
     <Button
         android:id="@+id/UserSetting"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
-        android:layout_width="340dp"
+        android:layout_width="320dp"
         android:layout_height="85dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
@@ -89,7 +89,7 @@
     <Button
         android:id="@+id/Setting"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
-        android:layout_width="340dp"
+        android:layout_width="320dp"
         android:layout_height="85dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"

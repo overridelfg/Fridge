@@ -1,0 +1,54 @@
+[
+  {
+    "caption": "Авокадо, фаршированное куриным ",
+    "image": "",
+    "ingredients": [
+      1,
+      8,
+      9,
+      10
+    ],
+    "description": "Очень круто"
+  },
+  {
+    "caption": "Авокадо, фаршированное куриным филе",
+    "image": "",
+    "ingredients": [
+      1,
+      8,
+      9
+    ],
+    "description": "Очень круто"
+  },
+  {
+    "caption": "Авокадо",
+    "image": "doc",
+    "ingredients": [
+      2,
+      4,
+      7
+    ],
+    "description": "Очень круто"
+  },
+  {
+    "caption": "Авокадо куриным филе",
+    "image": "doc",
+    "ingredients": [
+      6,
+      9,
+      1
+    ],
+    "description": "Очень круто"
+  },
+  {
+    "caption": "филе",
+    "image": "doc",
+    "ingredients": [
+      5,
+      3,
+      7
+    ],
+    "description": "Очень круто"
+  }
+
+]

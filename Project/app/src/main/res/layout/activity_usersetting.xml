@@ -23,7 +23,7 @@
 
     <Button
         android:id="@+id/acceptsetting"
-        android:layout_width="350sp"
+        android:layout_width="320sp"
         android:layout_height="79sp"
         android:textSize="40sp"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
@@ -50,90 +50,103 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
 
-        <CheckBox
-            android:id="@+id/checkBox1"
+        <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="@string/Вегетарианец"
-            android:textColor="#000000"
-            android:textSize="27sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.25"
-            android:theme="@style/MyCheckBox"/>
+            android:layout_height="match_parent"
+            android:id="@+id/radiogroup">
 
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="@string/Мясоед"
-            android:textColor="#000000"
-            android:textSize="27sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.30"
-            android:theme="@style/MyCheckBox"/>
+            <RadioButton
+                android:id="@+id/Radiobutton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="@string/Вегетарианец"
+                android:textColor="#000000"
+                android:textSize="27sp"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25" />
 
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="@string/Постящийся"
-            android:textColor="#000000"
-            android:textSize="27sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.35"
-            android:theme="@style/MyCheckBox"/>
+            <RadioButton
+                android:id="@+id/Radiobutton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="@string/Мясоед"
+                android:textColor="#000000"
+                android:textSize="27sp"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.30" />
 
-        <CheckBox
-            android:id="@+id/checkBox4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="@string/Диета"
-            android:textColor="#000000"
-            android:textSize="27sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.40"
-            android:theme="@style/MyCheckBox"/>
+            <RadioButton
+                android:id="@+id/Radiobutton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="@string/Постящийся"
+                android:textColor="#000000"
+                android:textSize="27sp"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35" />
 
-        <CheckBox
-            android:id="@+id/checkBox5"
-            android:layout_width="440dp"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="@string/Еда_для_беременных"
-            android:textColor="#000000"
-            android:textSize="27sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.28"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.45"
-            android:theme="@style/MyCheckBox"/>
+            <RadioButton
+                android:id="@+id/Radiobutton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="@string/Диета"
+                android:textColor="#000000"
+                android:textSize="27sp"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.40" />
+
+            <RadioButton
+                android:id="@+id/Radiobutton5"
+                android:layout_width="440dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="@string/Еда_для_беременных"
+                android:textColor="#000000"
+                android:textSize="27sp"
+                android:theme="@style/MyCheckBox"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.28"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.45" />
+
+        </RadioGroup>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

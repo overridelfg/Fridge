@@ -46,7 +46,7 @@
         android:id="@+id/accpetsetting"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="169dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:onClick="onMain2"
         android:text="@string/Принять"
@@ -64,7 +64,7 @@
         android:id="@+id/changesetting2"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="169dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:onClick="onMain3"
         android:text="@string/Изменить"
@@ -76,6 +76,8 @@
         app:layout_constraintStart_toEndOf="@+id/accpetsetting"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.972" />
+
+
 
 
 </android.support.constraint.ConstraintLayout>

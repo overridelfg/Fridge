@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F4FC"
-    tools:context=".Vegetarian">
+    tools:context=".ProductList">
 
     <TextView
         android:id="@+id/choose1"
@@ -45,7 +45,7 @@
         android:text="@string/Принять"
         android:textColor="#F4F4FC"
         android:textSize="30sp"
-        android:onClick="save"
+        android:onClick="onDishes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
