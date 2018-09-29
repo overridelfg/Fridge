@@ -26,7 +26,7 @@ public class Dishes extends AppCompatActivity {
         InputStream is = getResources().openRawResource(R.raw.recipes);
         JSONArray recipes;
         Intent intent = getIntent();
-        int[] products = intent.getIntArrayExtra("products");
+        ArrayList<Integer> products = intent.getIntegerArrayListExtra("products");
         try {
             recipes = new JSONArray(Utils.readJson(is));
             for (int i = 0; i < recipes.length(); i++) {
@@ -36,8 +36,8 @@ public class Dishes extends AppCompatActivity {
                 for (int j = 0; j < ingredients.length(); j++) {
                     int ingredient = ingredients.getInt(j);
                     boolean ok = false;
-                    for (int k = 0; k < products.length; k++) {
-                        if(products[k] == ingredient){
+                    for (int k = 0; k < products.size(); k++) {
+                        if(products.get(k) == ingredient){
                             ok=true;
                         }
                     }
