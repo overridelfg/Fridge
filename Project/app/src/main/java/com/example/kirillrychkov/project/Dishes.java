@@ -1,6 +1,7 @@
 package com.example.kirillrychkov.project;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -26,7 +27,7 @@ public class Dishes extends AppCompatActivity {
         InputStream is = getResources().openRawResource(R.raw.recipes);
         JSONArray recipes;
         Intent intent = getIntent();
-        int[] products = intent.getIntArrayExtra("products");
+        ArrayList<Integer> products = intent.getIntegerArrayListExtra("products");
         try {
             recipes = new JSONArray(Utils.readJson(is));
             for (int i = 0; i < recipes.length(); i++) {
@@ -36,8 +37,8 @@ public class Dishes extends AppCompatActivity {
                 for (int j = 0; j < ingredients.length(); j++) {
                     int ingredient = ingredients.getInt(j);
                     boolean ok = false;
-                    for (int k = 0; k < products.length; k++) {
-                        if(products[k] == ingredient){
+                    for (int k = 0; k < products.size(); k++) {
+                        if(products.get(k) == ingredient){
                             ok=true;
                         }
                     }
@@ -61,6 +62,9 @@ public class Dishes extends AppCompatActivity {
         for (JSONObject dish:dishesList) {
             try {
                 caption.setText(dish.getString("caption"));
+                Resources resources = getResources();
+                int resourceId = resources.getIdentifier(dish.getString("image"), "drawable", getPackageName());
+                image.setImageResource(resourceId);
                 description.setText(dish.getString("description"));
             } catch (JSONException e) {
                 e.printStackTrace();

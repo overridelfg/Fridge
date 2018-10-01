@@ -74,9 +74,11 @@ public class ProductList extends AppCompatActivity {
     List <String> checked=new ArrayList<>();
     public void onDishes(View view){
         SparseBooleanArray chosen = choiceList.getCheckedItemPositions();
-        int[] productIds = new int[chosen.size()];
-        for(int i = 0;i<chosen.size();i++){
-            productIds[i] = map.get(chosen.keyAt(i));
+        ArrayList<Integer> productIds = new ArrayList<>();
+        for(int i = 0;i<chosen.size();i++) {
+            if (chosen.valueAt(i)) {
+                productIds.add(map.get(chosen.keyAt(i)));
+            }
         }
         Intent intent=new Intent(ProductList.this,Dishes.class);
         intent.putExtra("products", productIds);

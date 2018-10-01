@@ -1,42 +1,119 @@
 [
   {
-    "caption": "Авокадо, фаршированное куриным ",
+    "caption": "1 ",
     "image": "",
     "ingredients": [
-      1,
-      8,
-      9,
-      10
+      0
     ],
     "description": "Очень круто"
   },
   {
-    "caption": "Авокадо, фаршированное куриным филе",
-    "image": "",
+    "caption": "Рис с морковью и луком",
+    "image": "rise_with_carrot",
     "ingredients": [
-      1,
-      8,
-      9
+      1
+    ],
+    "description": "1) Морковь - 2 шт. 2) Рис - 1 стакан 3) Лук репчатый - 1 шт. 4) Масло подсолнечное - 3 столовые ложки"
+  },
+  {
+    "caption": "3 ",
+    "image": "picture",
+    "ingredients": [
+      2
+    ],
+    "description": "4"
+  },
+  {
+    "caption": "4 ",
+    "image": "picture",
+    "ingredients": [
+      3
+    ],
+    "description": "Очень круто"
+  },{
+  "caption": "5 ",
+  "image": "picture",
+  "ingredients": [
+    4
+  ],
+  "description": "очень круто"
+},
+  {
+    "caption": "Фисташковый мусс с авокадо ",
+    "image": "a5",
+    "ingredients": [
+     5
+    ],
+    "description": "1) Авокадо 2) Мед - 5 столовых ложек 3) Несоленые фисташки - 130 г 4) Вода - ¼ стакана 5) Сок лайма - 1 чайная ложка 6) Морская соль"
+  },
+  {
+    "caption": "7",
+    "image": "picture",
+    "ingredients": [
+     6
     ],
     "description": "Очень круто"
   },
   {
-    "caption": "Авокадо",
-    "image": "doc",
+    "caption": "8",
+    "image": "picture",
     "ingredients": [
-      2,
-      4,
       7
     ],
     "description": "Очень круто"
+  },{
+  "caption": "9 ",
+  "image": "picture",
+  "ingredients": [
+  8
+  ],
+  "description": "Очень круто"
+},
+  {
+    "caption": "10 ",
+    "image": "picture",
+    "ingredients": [
+      9
+    ],
+    "description": "Очень круто"
+  },{
+  "caption": "11 ",
+  "image": "picture",
+  "ingredients": [
+   10
+  ],
+  "description": "Очень круто"
+},
+
+  {
+    "caption": "12",
+    "image": "picture",
+    "ingredients": [
+      11
+    ],
+    "description": "Очень круто"
+  },
+  {
+    "caption": "Тыквенный суп-пюре с мандариновым соком",
+    "image": "t34",
+    "ingredients": [
+      3, 4
+    ],
+    "description": "1) Тыква - 500 гр 2) Картофель  - 2 шт 3) Мандариновый сок  - 50 мл 4) Коричневый сахар  - 20 г 5) Белый лук  - 1 головка 6) Сливочное масло  - 50 гр"
+  },
+  {
+    "caption": "Шоколадный мусс с авокадо",
+    "image": "a25",
+    "ingredients": [
+      2, 5
+    ],
+    "description": " 1)Авокадо - 1 шт 2) Мед - 5 столовых ложек 3) Какао-порошок - 0,3 стакана 4) Кокосовое молоко - ½ стакана 5)Молотая корица - щепотка 6) Ванильный экстракт "
   },
   {
     "caption": "Авокадо куриным филе",
     "image": "doc",
     "ingredients": [
-      6,
-      9,
-      1
+      6, 9, 1
     ],
     "description": "Очень круто"
   },
@@ -44,11 +121,17 @@
     "caption": "филе",
     "image": "doc",
     "ingredients": [
-      5,
-      3,
-      7
+      5, 3, 7
     ],
     "description": "Очень круто"
+  },
+  {
+    "caption": "Такого блюда не существует",
+    "image": "icon",
+    "ingredients": [
+      0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+    ],
+    "description": "Попробуйте другие продукты"
   }
 
 ]
