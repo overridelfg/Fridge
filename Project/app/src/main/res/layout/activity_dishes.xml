@@ -43,20 +43,22 @@
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="270dp"
+        android:layout_width="329dp"
         android:layout_height="210dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:textColor="#000000"
+        android:gravity="left"
         android:text=""
+        android:textColor="#000000"
+        android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.941" />
 
 
 </android.support.constraint.ConstraintLayout>
