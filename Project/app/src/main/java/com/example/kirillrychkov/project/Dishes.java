@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -70,5 +72,6 @@ public class Dishes extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+
     }
 }

@@ -9,16 +9,16 @@
 
     <TextView
         android:id="@+id/caption"
-        android:layout_width="276dp"
+        android:layout_width="365dp"
         android:layout_height="63dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:textColor="#000000"
-        android:textSize="20sp"
         android:gravity="center"
         android:text=""
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.566"
@@ -28,13 +28,13 @@
 
     <ImageView
         android:id="@+id/image"
-        android:foregroundGravity="center"
         android:layout_width="272dp"
-        android:layout_height="230dp"
+        android:layout_height="237dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,22 +43,21 @@
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="329dp"
-        android:layout_height="210dp"
+        android:layout_width="397dp"
+        android:layout_height="272dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:gravity="left"
+        android:gravity="center"
         android:text=""
         android:textColor="#000000"
-        android:textSize="19sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
-
+        app:layout_constraintVertical_bias="0.979"
+        tools:ignore="RtlHardcoded" />
 
 </android.support.constraint.ConstraintLayout>

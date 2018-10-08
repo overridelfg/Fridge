@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ProductList extends AppCompatActivity {
+    private final static String FILE_NAMEBUFFER = "content.txt";
     ListView choiceList;
     TextView selection;
     Map<Integer, Integer> map = new HashMap<>();
@@ -43,7 +44,7 @@ public class ProductList extends AppCompatActivity {
         try {
             products = new JSONArray(Utils.readJson(is2));
             userPreferences = new JSONObject(Utils.readJson(is));
-            JSONArray productIds = userPreferences.getJSONArray(UserSetting.user);
+            JSONArray productIds = userPreferences.getJSONArray(openText());
             for (int i = 0; i < productIds.length(); i++) {
                 int productId = productIds.getInt(i);
                 String product = products.getString(productId);
@@ -84,7 +85,33 @@ public class ProductList extends AppCompatActivity {
         intent.putExtra("products", productIds);
         startActivity(intent);
     }
+    public String openText(){
 
+        FileInputStream fin = null;
+        try {
+            fin = openFileInput(FILE_NAMEBUFFER);
+            byte[] bytes = new byte[fin.available()];
+            fin.read(bytes);
+            String text = new String (bytes);
+            return text;
+        }
+        catch(IOException ex) {
+
+            Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
+            return FILE_NAMEBUFFER;
+        }
+        finally{
+
+            try{
+                if(fin!=null)
+                    fin.close();
+            }
+            catch(IOException ex){
+
+                Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 
 
 

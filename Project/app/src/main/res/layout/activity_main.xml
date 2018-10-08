@@ -13,7 +13,7 @@
         android:layout_width="127dp"
         android:layout_height="110dp"
         android:layout_marginStart="48dp"
-        android:src="@drawable/icon"
+        android:src="@drawable/mainicon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/MainText"
         app:layout_constraintHorizontal_bias="0.5"

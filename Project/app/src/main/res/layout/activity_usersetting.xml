@@ -23,10 +23,10 @@
 
     <Button
         android:id="@+id/acceptsetting"
-        android:layout_width="320sp"
-        android:layout_height="79sp"
-        android:textSize="40sp"
+        android:layout_width="340dp"
+        android:layout_height="65dp"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -116,7 +116,7 @@
                 android:layout_weight="1"
                 android:scaleX="1"
                 android:scaleY="1"
-                android:text="@string/Диета"
+                android:text="@string/На_диете"
                 android:textColor="#000000"
                 android:textSize="27sp"
                 android:theme="@style/MyCheckBox"
