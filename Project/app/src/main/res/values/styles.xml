@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#34495e</item>
         <item name="colorPrimaryDark">#000000</item>
-        <item name="colorAccent">#34495e</item>
+        <item name="colorAccent">#000000</item>
     </style>
     <style name="MyCheckBox" parent="Theme.AppCompat.Light">
         <item name="colorControlNormal">#000000</item>
