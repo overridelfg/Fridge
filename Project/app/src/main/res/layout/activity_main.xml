@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="127dp"
+        android:layout_width="112dp"
         android:layout_height="110dp"
         android:layout_marginStart="48dp"
         android:src="@drawable/mainicon"
@@ -20,11 +20,11 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintVertical_bias="0.092" />
 
     <TextView
         android:id="@+id/MainText"
-        android:layout_width="150sp"
+        android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="80dp"
@@ -32,7 +32,7 @@
         android:gravity="center"
         android:text="@string/Fridge"
         android:textColor="#000000"
-        android:textSize="50sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
     <Button
         android:id="@+id/Products"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_height="85dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
@@ -67,7 +67,7 @@
     <Button
         android:id="@+id/UserSetting"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_height="85dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
@@ -89,7 +89,7 @@
     <Button
         android:id="@+id/Setting"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
-        android:layout_width="320dp"
+        android:layout_width="300dp"
         android:layout_height="85dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
