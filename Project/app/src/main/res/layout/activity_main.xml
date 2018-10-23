@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="112dp"
+        android:layout_width="103dp"
         android:layout_height="110dp"
         android:layout_marginStart="48dp"
         android:src="@drawable/mainicon"
@@ -20,95 +20,102 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintVertical_bias="0.091" />
 
     <TextView
         android:id="@+id/MainText"
-        android:layout_width="172dp"
+        android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="80dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/chakrapetch_semibold"
         android:gravity="center"
         android:text="@string/Fridge"
         android:textColor="#000000"
-        android:textSize="60sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128" />
+        app:layout_constraintVertical_bias="0.12" />
 
 
     <Button
         android:id="@+id/Products"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="300dp"
-        android:layout_height="85dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_bg_rounded_corners"
+        android:fontFamily="@font/alegreyasanssc_regular"
+        android:foregroundGravity="center_vertical"
         android:gravity="center"
         android:onClick="onProducts"
         android:text="@string/Продукты"
         android:textColor="#F4F4FC"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/UserSetting"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418"
+        app:layout_constraintVertical_chainStyle="spread" />
 
 
     <Button
         android:id="@+id/UserSetting"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="300dp"
-        android:layout_height="85dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_bg_rounded_corners"
+        android:fontFamily="@font/alegreyasanssc_regular"
+        android:foregroundGravity="center_vertical"
         android:gravity="center"
         android:onClick="onUserSetting"
         android:text="@string/Пользователь"
         android:textAllCaps="false"
         android:textColor="#F4F4FC"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/Setting"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Products"
-        app:layout_constraintVertical_bias="0.64" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.637" />
 
     <Button
         android:id="@+id/Setting"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="300dp"
-        android:layout_height="85dp"
+        android:layout_height="72dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_bg_rounded_corners"
+        android:fontFamily="@font/alegreyasanssc_regular"
+        android:foregroundGravity="center_vertical"
         android:gravity="center"
         android:onClick="onSetting"
         android:text="@string/Настройки"
         android:textAllCaps="false"
         android:textColor="#F4F4FC"
-        android:textSize="40sp"
+        android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UserSetting"
-        app:layout_constraintVertical_bias="0.89" />
-
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.kirillrychkov.project;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -32,7 +33,9 @@ public class UserSetting extends AppCompatActivity {
 //        user = radioButton.getText().toString();
         if (radioGroup.getCheckedRadioButtonId() == -1)
         {
-
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Выберите предпочтение!", Toast.LENGTH_SHORT);
+            toast.show();
         }
         else
         {

@@ -9,47 +9,49 @@
 
     <TextView
         android:id="@+id/caption"
-        android:layout_width="365dp"
+        android:layout_width="427dp"
         android:layout_height="63dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/vollkorn_bold"
         android:gravity="center"
         android:text=""
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.035" />
 
+
     <ImageView
         android:id="@+id/image"
         android:layout_width="244dp"
-        android:layout_height="237dp"
+        android:layout_height="204dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="@string/todo"
         android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.246" />
 
     <TextView
         android:id="@+id/description"
         android:layout_width="397dp"
-        android:layout_height="223dp"
+        android:layout_height="264dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:gravity="center"
+        android:fontFamily="@font/ledger_regular"
+        android:gravity="center_horizontal"
         android:text=""
         android:textColor="#000000"
         android:textSize="15sp"
@@ -59,5 +61,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="RtlHardcoded" />
+
 
 </android.support.constraint.ConstraintLayout>

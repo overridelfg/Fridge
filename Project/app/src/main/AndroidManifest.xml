@@ -27,5 +27,4 @@
         <activity android:name=".Dishes"
             android:screenOrientation="portrait"/>
     </application>
-
 </manifest>

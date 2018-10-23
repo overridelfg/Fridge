@@ -1,9 +1,14 @@
 package com.example.kirillrychkov.project;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Canvas;
+import android.graphics.Path;
+import android.graphics.RectF;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ScrollView;
@@ -20,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dishes extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +46,15 @@ public class Dishes extends AppCompatActivity {
                     int ingredient = ingredients.getInt(j);
                     boolean ok = false;
                     for (int k = 0; k < products.size(); k++) {
-                        if(products.get(k) == ingredient){
-                            ok=true;
+                        if (products.get(k) == ingredient) {
+                            ok = true;
                         }
                     }
-                    if(ok==false){
-                        canCook=false;
+                    if (ok == false) {
+                        canCook = false;
                     }
                 }
-                if(canCook==true){
+                if (canCook == true) {
                     dishesList.add(recipe);
                 }
             }
@@ -61,7 +67,7 @@ public class Dishes extends AppCompatActivity {
         TextView caption = findViewById(R.id.caption);
         ImageView image = findViewById(R.id.image);
         TextView description = findViewById(R.id.description);
-        for (JSONObject dish:dishesList) {
+        for (JSONObject dish : dishesList) {
             try {
                 caption.setText(dish.getString("caption"));
                 Resources resources = getResources();
@@ -74,4 +80,5 @@ public class Dishes extends AppCompatActivity {
         }
 
     }
+
 }
