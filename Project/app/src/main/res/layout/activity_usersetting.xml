@@ -40,19 +40,20 @@
         android:textColor="#F4F4FC"/>
 
     <LinearLayout
-        android:layout_width="346dp"
-        android:layout_height="wrap_content"
+        android:layout_width="296dp"
+        android:layout_height="209dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:foregroundGravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/acceptsetting"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528"
+        app:layout_constraintVertical_bias="0.647"
         tools:ignore="MissingConstraints">
 
         <RadioGroup
@@ -62,14 +63,14 @@
             android:gravity="">
 
             <RadioButton
-                android:id="@+id/Radiobutton1"
+                android:id="@+id/Radiobutton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/ledger_regular"
                 android:scaleX="1"
                 android:scaleY="1"
-                android:text="@string/Вегетарианец"
+                android:text="@string/Постящийся"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:theme="@style/MyCheckBox"
@@ -78,7 +79,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.25" />
+                app:layout_constraintVertical_bias="0.35" />
 
             <RadioButton
                 android:id="@+id/Radiobutton2"
@@ -100,14 +101,14 @@
                 app:layout_constraintVertical_bias="0.30" />
 
             <RadioButton
-                android:id="@+id/Radiobutton3"
+                android:id="@+id/Radiobutton1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/ledger_regular"
                 android:scaleX="1"
                 android:scaleY="1"
-                android:text="@string/Постящийся"
+                android:text="@string/Вегетарианец"
                 android:textColor="#000000"
                 android:textSize="25sp"
                 android:theme="@style/MyCheckBox"
@@ -116,7 +117,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.35" />
+                app:layout_constraintVertical_bias="0.25" />
 
             <RadioButton
                 android:id="@+id/Radiobutton4"
