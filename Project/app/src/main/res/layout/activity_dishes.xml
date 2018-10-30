@@ -38,14 +38,15 @@
         android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246" />
+        app:layout_constraintVertical_bias="0.216" />
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="397dp"
-        android:layout_height="264dp"
+        android:layout_width="419dp"
+        android:layout_height="245dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -59,8 +60,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.791"
         tools:ignore="RtlHardcoded" />
 
-
+    <Button
+        android:id="@+id/acceptsetting"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:fontFamily="@font/alegreyasanssc_regular"
+        android:onClick="Savefav"
+        android:text="@string/Добавить_в_избранное"
+        android:textColor="#F4F4FC"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
 </android.support.constraint.ConstraintLayout>

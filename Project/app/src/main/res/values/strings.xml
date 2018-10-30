@@ -38,5 +38,8 @@
     <string name="Лук_репчатый">Лук репчатый</string>
     <string name="todo">TODO</string>
     <string name="История">История</string>
-
+    <string name="Список_желаемого">Список желаемого</string>
+    <string name="Очистить">Очистить</string>
+    <string name="Избранное">Избранное</string>
+    <string name="Добавить_в_избранное">Добавить в избранное</string>
 </resources>
