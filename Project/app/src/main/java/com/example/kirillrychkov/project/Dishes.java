@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -34,6 +35,49 @@ public class Dishes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dishes);
+        Intent intent = getIntent();
+        ArrayList<Integer> products = intent.getIntegerArrayListExtra("products");
+        if(products != null){
+            openByProducts();
+        } else {
+            openFavorite();
+        }
+
+    }
+    public void openFavorite(){
+        ArrayList<JSONObject> dishesList = new ArrayList<>();
+        InputStream is = getResources().openRawResource(R.raw.recipes);
+        JSONArray recipes;
+        Intent intent = getIntent();
+        String caption = intent.getStringExtra("caption");
+        try {
+            recipes = new JSONArray(Utils.readJson(is));
+            for (int i = 0; i < recipes.length(); i++) {
+                JSONObject recipe = recipes.getJSONObject(i);
+                if (recipe.getString("caption").equals(caption)) {
+                    dishesList.add(recipe);
+                    break;
+                }
+            }
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+        }
+        TextView captionView = findViewById(R.id.caption);
+        ImageView image = findViewById(R.id.image);
+        TextView description = findViewById(R.id.description);
+        for (JSONObject dish : dishesList) {
+            try {
+                captionView.setText(dish.getString("caption"));
+                Resources resources = getResources();
+                int resourceId = resources.getIdentifier(dish.getString("image"), "drawable", getPackageName());
+                image.setImageResource(resourceId);
+                description.setText(dish.getString("description"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void openByProducts(){
         ArrayList<JSONObject> dishesList = new ArrayList<>();
         InputStream is = getResources().openRawResource(R.raw.recipes);
         JSONArray recipes;
@@ -66,7 +110,6 @@ public class Dishes extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         TextView caption = findViewById(R.id.caption);
         ImageView image = findViewById(R.id.image);
         TextView description = findViewById(R.id.description);
@@ -81,50 +124,43 @@ public class Dishes extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-
     }
+
     private void checkFirstStart() {
 
         SharedPreferences sp = getSharedPreferences("hasVisited",
                 Context.MODE_PRIVATE);
-        // проверяем, первый ли раз открывается программа (Если вход первый то вернет false)
         boolean hasVisited = sp.getBoolean("hasVisited", false);
 
         if (!hasVisited) {
-            // Сработает если Вход первый
             saveTextBuffer("");
-            //Ставим метку что вход уже был
             SharedPreferences.Editor e = sp.edit();
             e.putBoolean("hasVisited", true);
-            e.commit(); //После этого hasVisited будет уже true и будет означать, что вход уже был
+            e.commit();
 
-            //Ниже запускаем активность которая нужна при первом входе
 
-        } else {
-
-            //Сработает если вход в приложение уже был
-            //Ниже запускаем активность которая нужна при последующих входах
         }
+
     }
     public void Savefav(View view){
-        String str=openText();
         checkFirstStart();
+        String str=openText();
         TextView caption = findViewById(R.id.caption);
         if(caption.getText().toString().contains("Вы не выбрали продукты") || caption.getText().toString().contains("Такого блюда не существует")){
             Toast toast = Toast.makeText(getApplicationContext(),
                     "Выберите валидные продукты", Toast.LENGTH_SHORT);
             toast.show();
         }
-        //TextView caption = findViewById(R.id.caption);
         else if(!str.contains(caption.getText().toString())){
             str+="(";
             str+=caption.getText().toString();
             str+=")";
             saveTextBuffer(str);
+
         }
         else{
             Toast toast = Toast.makeText(getApplicationContext(),
-                    "Такое блюдо уже находится в Избранном", Toast.LENGTH_SHORT);
+                    "Такое блюдо уже находится в избранном", Toast.LENGTH_SHORT);
             toast.show();
         }
     }
@@ -161,7 +197,6 @@ public class Dishes extends AppCompatActivity {
     }
     private final static String FILE_NAME = "content2.txt";
 
-    // 3 мильярда лошадиных сил
     public void saveTextBuffer(String obmen){
         FileOutputStream fos = null;
         try {

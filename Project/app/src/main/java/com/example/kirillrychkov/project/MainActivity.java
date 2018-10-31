@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent2 = new Intent(MainActivity.this,UserSetting.class);
         startActivity(intent2);
     }
+    public void onFavorite(View view){
+        Intent intent3 = new Intent(MainActivity.this,Favorite.class);
+        startActivity(intent3);
+    }
     public void onSetting(View view){
         Intent intent3 = new Intent(MainActivity.this,Setting.class);
         startActivity(intent3);

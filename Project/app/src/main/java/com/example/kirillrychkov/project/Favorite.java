@@ -3,18 +3,25 @@ package com.example.kirillrychkov.project;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,10 +88,48 @@ public class Favorite extends AppCompatActivity {
         lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View itemClicked, int position,
-                                    long id) {
+                                    long id){
+                String caption = ((TextView)itemClicked).getText().toString();
+                Intent intent=new Intent(Favorite.this,Dishes.class);
+                intent.putExtra("caption", caption);
+                startActivity(intent);
             }
         });
-
+    }
+    public void openFavorite(){
+        ArrayList<JSONObject> dishesList = new ArrayList<>();
+        InputStream is = getResources().openRawResource(R.raw.recipes);
+        JSONArray recipes;
+        Intent intent = getIntent();
+        String caption = intent.getStringExtra("caption");
+        try {
+            recipes = new JSONArray(Utils.readJson(is));
+            for (int i = 0; i < recipes.length(); i++) {
+                JSONObject recipe = recipes.getJSONObject(i);
+                if (recipe.getString("caption") == caption) {
+                    dishesList.add(recipe);
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        TextView captionView = findViewById(R.id.caption);
+        ImageView image = findViewById(R.id.image);
+        TextView description = findViewById(R.id.description);
+        for (JSONObject dish : dishesList) {
+            try {
+                captionView.setText(dish.getString("caption"));
+                Resources resources = getResources();
+                int resourceId = resources.getIdentifier(dish.getString("image"), "drawable", getPackageName());
+                image.setImageResource(resourceId);
+                description.setText(dish.getString("description"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void clear(View view){
@@ -95,6 +140,7 @@ public class Favorite extends AppCompatActivity {
         List<String> main=new ArrayList<>();
         adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,main);
         lvMain.setAdapter(adapter2);
+
 
     }
     public String openText(){
@@ -110,7 +156,7 @@ public class Favorite extends AppCompatActivity {
         catch(IOException ex) {
 
             Toast.makeText(this, ex.getMessage(), Toast.LENGTH_SHORT).show();
-            String kostil="Slomalos";
+            String kostil="Broke";
             return kostil;
         }
         finally{
@@ -130,28 +176,21 @@ public class Favorite extends AppCompatActivity {
 
         SharedPreferences sp = getSharedPreferences("hasVisited",
                 Context.MODE_PRIVATE);
-        // проверяем, первый ли раз открывается программа (Если вход первый то вернет false)
         boolean hasVisited = sp.getBoolean("hasVisited", false);
 
         if (!hasVisited) {
-            // Сработает если Вход первый
             saveTextBuffer("");
-            //Ставим метку что вход уже был
+
             SharedPreferences.Editor e = sp.edit();
             e.putBoolean("hasVisited", true);
-            e.commit(); //После этого hasVisited будет уже true и будет означать, что вход уже был
-
-            //Ниже запускаем активность которая нужна при первом входе
+            e.commit();
 
         } else {
 
-            //Сработает если вход в приложение уже был
-            //Ниже запускаем активность которая нужна при последующих входах
         }
     }
     private final static String FILE_NAME = "content2.txt";
 
-    // 3 мильярда лошадиных сил
     public void saveTextBuffer(String obmen){
         FileOutputStream fos = null;
         try {

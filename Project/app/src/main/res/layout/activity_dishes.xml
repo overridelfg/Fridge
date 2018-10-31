@@ -64,7 +64,7 @@
         tools:ignore="RtlHardcoded" />
 
     <Button
-        android:id="@+id/acceptsetting"
+        android:id="@+id/favorite2"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
         android:layout_width="300dp"
         android:layout_height="65dp"

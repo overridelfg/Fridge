@@ -59,23 +59,17 @@ public class Setting extends AppCompatActivity {
 
         SharedPreferences sp2 = getSharedPreferences("hasVisited2",
                 Context.MODE_PRIVATE);
-        // проверяем, первый ли раз открывается программа (Если вход первый то вернет false)
         boolean hasVisited = sp2.getBoolean("hasVisited2", false);
 
         if (!hasVisited) {
-            // Сработает если Вход первый
             saveTextBuffer("Ничего не выбрано");
-            //Ставим метку что вход уже был
             SharedPreferences.Editor e = sp2.edit();
             e.putBoolean("hasVisited2", true);
-            e.commit(); //После этого hasVisited будет уже true и будет означать, что вход уже был
+            e.commit();
 
-            //Ниже запускаем активность которая нужна при первом входе
 
         } else {
 
-            //Сработает если вход в приложение уже был
-            //Ниже запускаем активность которая нужна при последующих входах
         }
     }
     public void onFavorite(View view){

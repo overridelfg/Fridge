@@ -31,7 +31,7 @@
         <activity
             android:name=".Dishes"
             android:screenOrientation="portrait" />
-        <activity android:name=".Favorite"></activity>
+        <activity android:name=".Favorite" />
     </application>
 
 </manifest>

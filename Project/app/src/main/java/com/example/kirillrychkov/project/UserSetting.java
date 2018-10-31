@@ -34,7 +34,7 @@ public class UserSetting extends AppCompatActivity {
         if (radioGroup.getCheckedRadioButtonId() == -1)
         {
             Toast toast = Toast.makeText(getApplicationContext(),
-                    "Выберите предпочтение!", Toast.LENGTH_SHORT);
+                    "Выберите предпочтение", Toast.LENGTH_SHORT);
             toast.show();
         }
         else
