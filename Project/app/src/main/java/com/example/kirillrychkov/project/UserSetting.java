@@ -1,6 +1,8 @@
 package com.example.kirillrychkov.project;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +24,7 @@ public class UserSetting extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        checkFirstStart();
         setContentView(R.layout.activity_usersetting);
 
     }
@@ -48,6 +51,23 @@ public class UserSetting extends AppCompatActivity {
         Intent intent = new Intent(UserSetting.this,Setting.class);
         startActivity(intent);
 
+    }
+    private void checkFirstStart() {
+
+        SharedPreferences sp2 = getSharedPreferences("hasVisited2",
+                Context.MODE_PRIVATE);
+        boolean hasVisited = sp2.getBoolean("hasVisited2", false);
+
+        if (!hasVisited) {
+            saveTextBuffer("Ничего не выбрано");
+            SharedPreferences.Editor e = sp2.edit();
+            e.putBoolean("hasVisited2", true);
+            e.commit();
+
+
+        } else {
+
+        }
     }
     public void saveTextBuffer(String obmen){
         java.io.FileOutputStream fos = null;

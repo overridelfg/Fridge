@@ -42,7 +42,10 @@ public class Dishes extends AppCompatActivity {
         } else {
             openFavorite();
         }
-
+        if (hideFavorites()) {
+            View btn = findViewById(R.id.favorite2);
+            btn.setVisibility(View.INVISIBLE);
+        }
     }
     public void openFavorite(){
         ArrayList<JSONObject> dishesList = new ArrayList<>();
@@ -146,23 +149,21 @@ public class Dishes extends AppCompatActivity {
         checkFirstStart();
         String str=openText();
         TextView caption = findViewById(R.id.caption);
-        if(caption.getText().toString().contains("Вы не выбрали продукты") || caption.getText().toString().contains("Такого блюда не существует")){
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "Выберите валидные продукты", Toast.LENGTH_SHORT);
-            toast.show();
-        }
-        else if(!str.contains(caption.getText().toString())){
+         if(!str.contains(caption.getText().toString())){
             str+="(";
             str+=caption.getText().toString();
             str+=")";
             saveTextBuffer(str);
+            Button button = findViewById(R.id.favorite2);
+            button.setVisibility(View.INVISIBLE);
 
         }
-        else{
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "Такое блюдо уже находится в избранном", Toast.LENGTH_SHORT);
-            toast.show();
-        }
+    }
+    public boolean hideFavorites() {
+        String str = openText();
+        TextView captionView = findViewById(R.id.caption);
+        String caption = captionView.getText().toString();
+        return str.contains(caption) || caption.equals("Вы не выбрали продукты") || caption.equals("Такого блюда не существует");
     }
 
 

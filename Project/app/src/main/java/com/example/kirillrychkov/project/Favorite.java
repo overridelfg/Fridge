@@ -34,8 +34,8 @@ public class Favorite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
         ListView lvMain=findViewById(R.id.lvMain);
-        String str=openText();
         checkFirstStart();
+        String str=openText();
         //кодировка(aa)
         String buffer="";
         char[] chArray=str.toCharArray();
@@ -96,39 +96,21 @@ public class Favorite extends AppCompatActivity {
             }
         });
     }
-    public void openFavorite(){
-        ArrayList<JSONObject> dishesList = new ArrayList<>();
-        InputStream is = getResources().openRawResource(R.raw.recipes);
-        JSONArray recipes;
-        Intent intent = getIntent();
-        String caption = intent.getStringExtra("caption");
-        try {
-            recipes = new JSONArray(Utils.readJson(is));
-            for (int i = 0; i < recipes.length(); i++) {
-                JSONObject recipe = recipes.getJSONObject(i);
-                if (recipe.getString("caption") == caption) {
-                    dishesList.add(recipe);
-                    break;
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        TextView captionView = findViewById(R.id.caption);
-        ImageView image = findViewById(R.id.image);
-        TextView description = findViewById(R.id.description);
-        for (JSONObject dish : dishesList) {
-            try {
-                captionView.setText(dish.getString("caption"));
-                Resources resources = getResources();
-                int resourceId = resources.getIdentifier(dish.getString("image"), "drawable", getPackageName());
-                image.setImageResource(resourceId);
-                description.setText(dish.getString("description"));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+    private void checkFirstStart() {
+
+        SharedPreferences sp = getSharedPreferences("hasVisited",
+                Context.MODE_PRIVATE);
+        boolean hasVisited = sp.getBoolean("hasVisited", false);
+
+        if (!hasVisited) {
+            saveTextBuffer("");
+
+            SharedPreferences.Editor e = sp.edit();
+            e.putBoolean("hasVisited", true);
+            e.commit();
+
+        } else {
+
         }
     }
 
@@ -172,23 +154,7 @@ public class Favorite extends AppCompatActivity {
             }
         }
     }
-    private void checkFirstStart() {
 
-        SharedPreferences sp = getSharedPreferences("hasVisited",
-                Context.MODE_PRIVATE);
-        boolean hasVisited = sp.getBoolean("hasVisited", false);
-
-        if (!hasVisited) {
-            saveTextBuffer("");
-
-            SharedPreferences.Editor e = sp.edit();
-            e.putBoolean("hasVisited", true);
-            e.commit();
-
-        } else {
-
-        }
-    }
     private final static String FILE_NAME = "content2.txt";
 
     public void saveTextBuffer(String obmen){
