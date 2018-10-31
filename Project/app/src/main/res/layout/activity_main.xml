@@ -97,7 +97,7 @@
     <Button
         android:id="@+id/Setting"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
-        android:layout_width="70dp"
+        android:layout_width="65dp"
         android:layout_height="63dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="50dp"
@@ -116,6 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
     <Button
         android:id="@+id/favorite2"
         style="@android:style/Widget.Holo.Light.Button.Toggle"
@@ -135,8 +136,9 @@
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856" />
+        app:layout_constraintVertical_bias="0.848" />
 
 </android.support.constraint.ConstraintLayout>
