@@ -50,6 +50,7 @@ public class Favorite extends AppCompatActivity {
                 buffer="";
             }
         }
+
         ArrayAdapter<String> adapter2;
         adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,main);
         lvMain.setAdapter(adapter2);
@@ -83,8 +84,6 @@ public class Favorite extends AppCompatActivity {
                 return true;
             }
         });
-
-
         lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View itemClicked, int position,
