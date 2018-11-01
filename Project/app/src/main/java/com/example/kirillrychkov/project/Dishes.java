@@ -35,6 +35,8 @@ public class Dishes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dishes);
+        checkFirstStart();
+
         Intent intent = getIntent();
         ArrayList<Integer> products = intent.getIntegerArrayListExtra("products");
         if(products != null){
