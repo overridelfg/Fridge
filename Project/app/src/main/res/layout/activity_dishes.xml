@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/caption"
-        android:layout_width="427dp"
-        android:layout_height="63dp"
+        android:layout_width="399dp"
+        android:layout_height="89dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
@@ -22,9 +22,10 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <ImageView
@@ -45,22 +46,22 @@
 
     <TextView
         android:id="@+id/description"
-        android:layout_width="419dp"
+        android:layout_width="399dp"
         android:layout_height="245dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/ledger_regular"
+        android:gravity="center_horizontal"
         android:text=""
         android:textColor="#000000"
-        android:gravity="center_horizontal"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.791"
+        app:layout_constraintVertical_bias="0.801"
         tools:ignore="RtlHardcoded" />
 
     <Button
