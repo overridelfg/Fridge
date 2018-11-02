@@ -37,7 +37,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@null"
-        android:textSize="13sp"
+        android:textSize="12sp"
         android:text="@string/next"
         android:textColor="@android:color/white"
         tools:ignore="SmallSp" />
@@ -49,7 +49,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="@null"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:text="@string/skip"
         android:textColor="@android:color/white" />
 

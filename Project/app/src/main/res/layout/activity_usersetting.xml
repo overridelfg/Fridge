@@ -148,7 +148,7 @@
                 android:scaleY="1"
                 android:text="@string/Еда_для_беременных"
                 android:textColor="#000000"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:theme="@style/MyCheckBox"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.28"
